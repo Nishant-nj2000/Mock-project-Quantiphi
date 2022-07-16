@@ -15,6 +15,7 @@ https://drive.google.com/file/d/1XiRsJBIZpb2sZ2caThtjj71nAzl3rGEq/view?usp=shari
 ------------------------------------------------------------------------------------------------------------------------
 
 Technologies Used:
+
 ● IICS
 ● PowerBI
 ● Snowflake
@@ -29,6 +30,7 @@ Architecture diagram
 ------------------------------------------------------------------------------------------------------------------------
 
 SQL
+
 ● Creating schema for all the tables
 ```
 create or replace TABLE MOCK_PROJECT_DB.PUBLIC."Demorgaphics_data_2015" (

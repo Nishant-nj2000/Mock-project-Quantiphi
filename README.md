@@ -137,6 +137,7 @@ create or replace TABLE MOCK_PROJECT_DB.PUBLIC."ReportSources_data_2015" (
 ------------------------------------------------------------------------------------------------------------------------
 
 ETL
+
 ● Configured snowflake connector in IICS to fetch the tables which were uploaded using
 the below .py script
 
@@ -152,8 +153,7 @@ from snowflake.connector.pandas_tools import write_pandas
 conn = snow.connect(user="NISHANT007",
 password="Gangsternj@27",
 account="in17047.uae-north.azure",
-#(the prefix in your snowflake space... for example, 
-#company.snowflakecomputing.com would just be "company" as the ACCOUNT name)
+#(the prefix in your snowflake space... for example, company.snowflakecomputing.com would just be "company" as the ACCOUNT name)
 warehouse="MOCK_PROJECT",
 database="MOCK_PROJECT_DB",
 schema="PUBLIC")
@@ -184,7 +184,6 @@ cur.execute(sql)
 #Close your cursor and your connection.
 cur.close()
 conn.close()
-
 ------------------------------------------------------------------------------------------------------------------------
 
 Data warehouse

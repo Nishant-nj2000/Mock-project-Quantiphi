@@ -193,31 +193,40 @@ conn.close()
 
 Data warehouse
 Source Tables:
+
   ![image](https://user-images.githubusercontent.com/72196083/179357635-02fbddf4-8f87-443f-a3c2-31fa22b51418.png)
 
 Step 1: Go to Admin Panel
+
   ![image](https://user-images.githubusercontent.com/72196083/179357653-d837e5ea-f69e-4851-a029-10c67192ccf8.png)
 
 Step 2: Go to Add-On Connectors
+
   ![image](https://user-images.githubusercontent.com/72196083/179357667-e72b8963-9b82-49d2-9801-10dd56996178.png)
 
 Step 3: Search for Snowflake connector and activate it.
+
   ![image](https://user-images.githubusercontent.com/72196083/179357680-95595cf0-6a6b-4534-9ce6-eeba553146fa.png)
 
 Step 4: Go to Data Integration
+
   ![image](https://user-images.githubusercontent.com/72196083/179357712-e4c5725e-438c-48f0-b701-ce8ffaca8a93.png)
 
 Step 5: Create a new mapping
+
   ![image](https://user-images.githubusercontent.com/72196083/179357754-f9a29604-a8af-431e-9916-c08dd7b51785.png)
 
 Step 6: Source
+
   ![image](https://user-images.githubusercontent.com/72196083/179357770-a0a38d5a-1bd9-4296-8e92-b061123beaa8.png)
 
 Step 7: Configure connection (if not exists) create a new Connection, test it and save.
+
   ![image](https://user-images.githubusercontent.com/72196083/179357878-3d9f6773-1919-4cd2-8097-9e10d4cc5ebb.png)
 
 Step 8: Create Mapping
   ● Aggregator - Remove Duplicate Records
+  
   ![image](https://user-images.githubusercontent.com/72196083/179358119-b3cf573f-e13f-4d2a-bb33-64e1ef84031e.png)
 
     (a) Select a column on whose basis you want to delete duplicate records
@@ -226,19 +235,22 @@ Step 8: Create Mapping
     ![image](https://user-images.githubusercontent.com/72196083/179358127-c2231b63-069a-4f10-9a1a-3d3f5b41a772.png)
 
   ● (OPTIONAL) Expression - Derive age group from the age column
+  
   ![image](https://user-images.githubusercontent.com/72196083/179358162-452fe0a0-2175-475d-92d6-5b6a9c08c1c5.png)
 
     (a) Add a new expression
     ![image](https://user-images.githubusercontent.com/72196083/179358180-8ff23e5e-8dfe-4fc2-9372-2f205479972a.png)
 
   ● Filter - Remove records with NULL values.
+  
   ![image](https://user-images.githubusercontent.com/72196083/179358200-867f9a61-10e4-4a70-801f-44b8942b5c03.png)
 
     (a) Select Advanced from the dropdown and use Decode to write multiple conditions
     and validate it.
     ![image](https://user-images.githubusercontent.com/72196083/179358228-08cfd09e-46dc-4dbe-8330-206e650a825b.png)
-
+    
   ● Target
+  
   ![image](https://user-images.githubusercontent.com/72196083/179358241-d440de19-21eb-489c-8579-edf9b897072a.png)
 
     (a) Repeat Step 7 if the target connection is not created.

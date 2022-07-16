@@ -1,6 +1,7 @@
 # Mock-project-Quantiphi
 
 Data Description:
+
 This dataset talks about the medication error reports, submitted to the FDA, to support the
 post-marketing safety surveillance program for drug and therapeutic biologic products. The structure of
 the AERS database adheres to the international safety reporting guidance issued by the International
@@ -17,9 +18,13 @@ https://drive.google.com/file/d/1XiRsJBIZpb2sZ2caThtjj71nAzl3rGEq/view?usp=shari
 Technologies Used:
 
 ● IICS
+
 ● PowerBI
+
 ● Snowflake
+
 ● Python
+
 ● SQL
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -262,25 +267,33 @@ Step 8: Create Mapping
     ![image](https://user-images.githubusercontent.com/72196083/179358338-decc2c9a-4639-4720-8f4f-ac8f58cf3a60.png)
 
   Step 9 : Save and Run the Mapping
+  
   ![image](https://user-images.githubusercontent.com/72196083/179358403-49ee88df-cc46-4943-8128-bee0e3ba7ecc.png)
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Target Tables:
+
 ![image](https://user-images.githubusercontent.com/72196083/179358420-5e99dec6-0d7b-44d8-8b1b-35984c3d3fec.png)
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Transformations used:
+
 ● Source
+
 ● Filter
+
 ● Aggregator
+
 ● Function Expression
+
 ● Target
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Data modeling
+
 ● Identify dimensions and facts and perform data modeling.
   Dimension Tables :
     1. Demorgaphics_data_2015
@@ -291,12 +304,15 @@ Data modeling
     2. EventTerms_data_2015
     3. PatientOutcomes_data_2015
     4. PreferredTermIndicator_data_2015
+    
 ![image](https://user-images.githubusercontent.com/72196083/179358628-495465d7-fa60-4701-a78d-f4b43c155046.png)
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Dashboarding and story building
+
 ● Dashboarding using PowerBI | Snowflake DWH
+
 ![image](https://user-images.githubusercontent.com/72196083/179358773-6c9857f1-7b3b-4238-90dd-655042e10eb0.png)
 
 ![image](https://user-images.githubusercontent.com/72196083/179358787-9a743b37-b45e-47ee-8016-7af7c1dc914e.png)

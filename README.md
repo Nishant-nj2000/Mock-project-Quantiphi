@@ -142,6 +142,7 @@ ETL
 the below .py script
 
 Load.py
+```
 #Importing the required packages for all your data framing needs.
 from tokenize import String
 import pandas as pd
@@ -184,6 +185,7 @@ cur.execute(sql)
 #Close your cursor and your connection.
 cur.close()
 conn.close()
+```
 ------------------------------------------------------------------------------------------------------------------------
 
 Data warehouse

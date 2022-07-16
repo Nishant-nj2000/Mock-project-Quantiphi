@@ -30,6 +30,7 @@ Architecture diagram
 
 SQL
 ● Creating schema for all the tables
+```
 create or replace TABLE MOCK_PROJECT_DB.PUBLIC."Demorgaphics_data_2015" (
 	"primaryid" NUMBER(38,0) NOT NULL,
 	"caseid" NUMBER(38,0),
@@ -133,7 +134,7 @@ create or replace TABLE MOCK_PROJECT_DB.PUBLIC."ReportSources_data_2015" (
 	"rpsr_code" VARCHAR(10),
 	"serialid" NUMBER(38,0)
 );
-
+```
 ------------------------------------------------------------------------------------------------------------------------
 
 ETL

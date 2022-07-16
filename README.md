@@ -1,6 +1,6 @@
 # Mock-project-Quantiphi
 
-Data Description:
+## Data Description:
 
 This dataset talks about the medication error reports, submitted to the FDA, to support the
 post-marketing safety surveillance program for drug and therapeutic biologic products. The structure of
@@ -10,12 +10,13 @@ Medical Dictionary for Regulatory Activities (MedDRA) terminology.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Data Files:
+## Data Files:
+
 https://drive.google.com/file/d/1XiRsJBIZpb2sZ2caThtjj71nAzl3rGEq/view?usp=sharing
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Technologies Used:
+## Technologies Used:
 
 ● IICS
 
@@ -29,14 +30,14 @@ Technologies Used:
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Architecture diagram
+## Architecture diagram
 ![image](https://user-images.githubusercontent.com/72196083/179357224-346a6da0-e587-4753-b05a-ccf29e82d441.png)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-SQL
+## SQL
 
-● Creating schema for all the tables
+### ● Creating schema for all the tables
 ```
 create or replace TABLE MOCK_PROJECT_DB.PUBLIC."Demorgaphics_data_2015" (
 	"primaryid" NUMBER(38,0) NOT NULL,
@@ -144,10 +145,9 @@ create or replace TABLE MOCK_PROJECT_DB.PUBLIC."ReportSources_data_2015" (
 ```
 ------------------------------------------------------------------------------------------------------------------------
 
-ETL
+## ETL
 
-● Configured snowflake connector in IICS to fetch the tables which were uploaded using
-the below .py script
+### ● Configured snowflake connector in IICS to fetch the tables which were uploaded using the below .py script
 
 Load.py
 ```
@@ -196,41 +196,42 @@ conn.close()
 ```
 ------------------------------------------------------------------------------------------------------------------------
 
-Data warehouse
-Source Tables:
+## Data warehouse
 
+### Source Tables:
   ![image](https://user-images.githubusercontent.com/72196083/179357635-02fbddf4-8f87-443f-a3c2-31fa22b51418.png)
 
-Step 1: Go to Admin Panel
+### Step 1: Go to Admin Panel
 
   ![image](https://user-images.githubusercontent.com/72196083/179357653-d837e5ea-f69e-4851-a029-10c67192ccf8.png)
 
-Step 2: Go to Add-On Connectors
+### Step 2: Go to Add-On Connectors
 
   ![image](https://user-images.githubusercontent.com/72196083/179357667-e72b8963-9b82-49d2-9801-10dd56996178.png)
 
-Step 3: Search for Snowflake connector and activate it.
+### Step 3: Search for Snowflake connector and activate it.
 
   ![image](https://user-images.githubusercontent.com/72196083/179357680-95595cf0-6a6b-4534-9ce6-eeba553146fa.png)
 
-Step 4: Go to Data Integration
+### Step 4: Go to Data Integration
 
   ![image](https://user-images.githubusercontent.com/72196083/179357712-e4c5725e-438c-48f0-b701-ce8ffaca8a93.png)
 
-Step 5: Create a new mapping
+### Step 5: Create a new mapping
 
   ![image](https://user-images.githubusercontent.com/72196083/179357754-f9a29604-a8af-431e-9916-c08dd7b51785.png)
 
-Step 6: Source
+### Step 6: Source
 
   ![image](https://user-images.githubusercontent.com/72196083/179357770-a0a38d5a-1bd9-4296-8e92-b061123beaa8.png)
 
-Step 7: Configure connection (if not exists) create a new Connection, test it and save.
+### Step 7: Configure connection (if not exists) create a new Connection, test it and save.
 
   ![image](https://user-images.githubusercontent.com/72196083/179357878-3d9f6773-1919-4cd2-8097-9e10d4cc5ebb.png)
 
-Step 8: Create Mapping
-  ● Aggregator - Remove Duplicate Records
+### Step 8: Create Mapping
+
+  #### ● Aggregator - Remove Duplicate Records
   
   ![image](https://user-images.githubusercontent.com/72196083/179358119-b3cf573f-e13f-4d2a-bb33-64e1ef84031e.png)
 
@@ -239,14 +240,14 @@ Step 8: Create Mapping
     (b) Check the Sorted Input
     ![image](https://user-images.githubusercontent.com/72196083/179358127-c2231b63-069a-4f10-9a1a-3d3f5b41a772.png)
 
-  ● (OPTIONAL) Expression - Derive age group from the age column
+  #### ● (OPTIONAL) Expression - Derive age group from the age column
   
   ![image](https://user-images.githubusercontent.com/72196083/179358162-452fe0a0-2175-475d-92d6-5b6a9c08c1c5.png)
 
     (a) Add a new expression
     ![image](https://user-images.githubusercontent.com/72196083/179358180-8ff23e5e-8dfe-4fc2-9372-2f205479972a.png)
 
-  ● Filter - Remove records with NULL values.
+  #### ● Filter - Remove records with NULL values.
   
   ![image](https://user-images.githubusercontent.com/72196083/179358200-867f9a61-10e4-4a70-801f-44b8942b5c03.png)
 
@@ -254,7 +255,7 @@ Step 8: Create Mapping
     and validate it.
     ![image](https://user-images.githubusercontent.com/72196083/179358228-08cfd09e-46dc-4dbe-8330-206e650a825b.png)
     
-  ● Target
+  ### ● Target
   
   ![image](https://user-images.githubusercontent.com/72196083/179358241-d440de19-21eb-489c-8579-edf9b897072a.png)
 
@@ -266,19 +267,19 @@ Step 8: Create Mapping
     (c) Choose operation as INSERT if creating a new at runtime or update if object already exists
     ![image](https://user-images.githubusercontent.com/72196083/179358338-decc2c9a-4639-4720-8f4f-ac8f58cf3a60.png)
 
-  Step 9 : Save and Run the Mapping
+  #### Step 9 : Save and Run the Mapping
   
   ![image](https://user-images.githubusercontent.com/72196083/179358403-49ee88df-cc46-4943-8128-bee0e3ba7ecc.png)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Target Tables:
+## Target Tables:
 
 ![image](https://user-images.githubusercontent.com/72196083/179358420-5e99dec6-0d7b-44d8-8b1b-35984c3d3fec.png)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Transformations used:
+## Transformations used:
 
 ● Source
 
@@ -292,14 +293,17 @@ Transformations used:
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Data modeling
+## Data modeling
 
-● Identify dimensions and facts and perform data modeling.
+### ● Identify dimensions and facts and perform data modeling.
   Dimension Tables :
+  
     1. Demorgaphics_data_2015
     2. DrugInformation_data_2015
     3. ReportSources_data_2015
+  
   Fact Tables :
+  
     1. DrugTherapyDuration_data_2015
     2. EventTerms_data_2015
     3. PatientOutcomes_data_2015
@@ -309,9 +313,9 @@ Data modeling
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Dashboarding and story building
+## Dashboarding and story building
 
-● Dashboarding using PowerBI | Snowflake DWH
+### ● Dashboarding using PowerBI | Snowflake DWH
 
 ![image](https://user-images.githubusercontent.com/72196083/179358773-6c9857f1-7b3b-4238-90dd-655042e10eb0.png)
 
@@ -323,7 +327,7 @@ Dashboarding and story building
 
 ------------------------------------------------------------------------------------------------------------------------
 
-References
+## References
 ● https://onlinehelp.informatica.com/IICS/prod/admin/en/index.htm#page/aa-admin-whats-new/
 Serverless_runtime_environments.html
 ● https://docs.snowflake.com/en/

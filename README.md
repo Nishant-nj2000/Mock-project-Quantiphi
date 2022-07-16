@@ -328,11 +328,15 @@ conn.close()
 ------------------------------------------------------------------------------------------------------------------------
 
 ## References
-● https://onlinehelp.informatica.com/IICS/prod/admin/en/index.htm#page/aa-admin-whats-new/
-Serverless_runtime_environments.html
+
+● https://onlinehelp.informatica.com/IICS/prod/admin/en/index.htm#page/aa-admin-whats-new/Serverless_runtime_environments.html
+
 ● https://docs.snowflake.com/en/
+
 ● https://stackoverflow.com/
+
 ● Questions and Answers on FDA's Adverse Event Reporting System (FAERS) | FDA
+
 ● Qlik Sense (fda.gov)
 
 
